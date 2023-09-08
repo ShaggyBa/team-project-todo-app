@@ -9,7 +9,6 @@ function App() {
         <div>
           <img src={logo} className="logo" alt="logo" />
         </div>
-        <h1>Hello World</h1>
       </header>
     </div>
   );

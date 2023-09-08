@@ -9,3 +9,8 @@
 	src: url('/public/fonts/Poppins-SemiBold.ttf');
 	font-weight: 600;
 }
+
+body {
+	background-color: #241722;
+	font-family: 'Poppins', sans-serif;
+}
