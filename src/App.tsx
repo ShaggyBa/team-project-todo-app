@@ -1,20 +1,26 @@
 import React from "react";
 import "./reset.css";
-import "./UI-styles.css";
-import { VariantBtn } from "./components/VariantBtn/VariantBtn";
+import "./UI-colors.css"
+import cssStyles from './App.module.css'
+import { Sidebar } from "./components/Sidebar/Sidebar";
 
 function App() {
 	return (
-		<div className="app">
-			<header className="app-header">
+		<div className={cssStyles.todoApp_Wrapper}>
+			<header className={cssStyles.todoApp_Header}>
+
 			</header>
-			<div className="container">
-				<VariantBtn variant="add-task" />
-				<VariantBtn variant="add-list" />
-				<VariantBtn variant="delete-list" />
-				<VariantBtn />
+			<div className={cssStyles.todoApp_MainWrapper}>
+				<div className={cssStyles.todoApp_NavArea}>
+					<Sidebar />
+				</div>
+				<div className={cssStyles.todoApp_TaskArea}>
+					{/* Main */}
+				</div>
 			</div>
-			<footer className="app-footer"></footer>
+			<footer className={cssStyles.todoApp_Footer}>
+
+			</footer>
 		</div>
 	);
 }

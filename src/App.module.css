@@ -1,0 +1,24 @@
+.todoApp_Wrapper{
+    display: grid;
+    grid-template-areas: 
+    "header header" 
+    "nav tasks"
+    "";
+}
+
+.todoApp_MainWrapper{
+    grid-area: main;
+}
+.todoApp_NavArea{
+    grid-area: nav;
+}
+.todoApp_TaskArea{
+    grid-area: tasks;
+}
+
+.todoApp_Header{
+    grid-area: header;
+}
+.todoApp_Footer{
+    grid-area: footer;
+}
