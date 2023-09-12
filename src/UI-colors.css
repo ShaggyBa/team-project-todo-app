@@ -1,0 +1,161 @@
+:root {
+    --black: #000000;
+    --primary: #FFFFFF;
+    --turquoise: #4DD599;
+    --cyan: #64C4ED;
+    --dirtWhite: #F2F2F2;
+    --dirtTurquoise: #42B883;
+    --grayOne: #868686;
+    --paleGreen: #B6E6BD;
+    --brightGray: #C9D1D3;
+    --brighterGray: #E8E8E8;
+    --palePink: #FFBBCC;
+    --anotherBlack: #09011A;
+    --darkGray: #525252;
+    --darkToBrighterOneGray: #5C5C5C;
+    --darkToBrighterSecondGray: #767676;
+    --darkToBrighterThreeGray: #7C7C7C;
+    --darkToBrighterFourGray: #B3B3B3;
+    --theMostBrighterGray: #EFEFEF;
+    --anotherWhite: #F1F1F1;
+    --carrot: #FF6464;
+    }
+    
+    .f-family-primary {
+        font-family: Lato;
+    }
+    .f-size-verySmall{
+        font-size: 12.5px;
+    }
+    .f-size-small{
+        font-size: 14px;
+    }
+    .f-size-medium{
+        font-size: 16px;
+    }
+    .f-size-large{
+        font-size: 32px;
+    }
+    
+    .primary {
+        color: var(--primary)
+    }
+    .bg-primary{
+        background-color: var(--primary)
+    }
+    .black {
+        color: var(--black)
+    }
+    .bg-black {
+        background-color: var(--black)
+    }
+    .turquoise{
+        color: var(--turquoise)
+    }
+    .bg-turquoise{
+        background-color: var(--turquoise)
+    }
+    .cyan {
+        color: var(--cyan)
+    }
+    .bg-cyan {
+        background-color: var(--cyan)
+    }
+    .dirtWhite{
+        color: var(--dirtWhite)
+    }
+    .bg-dirtWhite{
+        background-color: var(--dirtWhite)
+    }
+    .dirtTurquoise{
+        color: var(--dirtTurquoise)
+    }
+    .bg-dirtTurquoise{
+        background-color: var(--dirtTurquoise);
+    }
+    .grayOne{
+        color: var(--grayOne)
+    }
+    .bg-grayOne{
+        background-color: var(--grayOne);
+    }
+    .paleGreen{
+        color: var(--paleGreen)
+    }
+    .bg-paleGreen{
+        background-color: var(--paleGreen)
+    }
+    .brightGray{
+        color: var(--brightGray)
+    }
+    .bg-brightGray{
+        background-color: var(--brightGray)
+    }
+    .brighterGray{
+        color: var(--brighterGray)
+    }
+    .bg-brighterGray{
+        background-color: var(--brighterGray)
+    }
+    .palePink{
+        color: var(--palePink)
+    }
+    .bg-palePink{
+        background-color: var(--palePink);
+    }
+    .anotherBlack{
+        color: var(--anotherBlack)
+    }
+    .bg-anotherBlack{
+        background-color: var(--anotherBlack);
+    }
+    .darkGray{
+        color: var(--darkGray)
+    }
+    .bg-darkGray{
+        background-color: var(--darkGray)
+    }
+    .darkToBrighterOneGray{
+        color: var(--darkToBrighterOneGray)
+    }
+    .bg-darkToBrighterOneGray{
+        background-color: var(--darkToBrighterOneGray);
+    }
+    .darkToBrighterSecondGray{
+        color: var(--darkToBrighterSecondGray);
+    }
+    .bg-darkToBrighterSecondGray{
+        background-color: var(--darkToBrighterSecondGray);
+    }
+    .darkToBrighterThreeGray{
+        color: var(--darkToBrighterThreeGray);
+    }
+    .bg-darkToBrighterThreeGray{
+        background-color: var(--darkToBrighterThreeGray);
+    }
+    .darkToBrighterFourGray{
+        color: var(--darkToBrighterFourGray)
+    }
+    .bg-darkToBrighterFourGray{
+        background-color: var(--darkToBrighterFourGray);
+    }
+    .theMostBrighterGray{
+        color: var(--theMostBrighterGray)
+    }
+    .bg-theMostBrighterGray{
+        background-color: var(--theMostBrighterGray);
+    }
+    .anotherWhite{
+        color: var(--anotherWhite);
+    }
+    .bg-anotherWhite{
+        background-color: var(--anotherWhite);
+    }
+    .carrot{
+        color: var(--carrot);
+    }
+    .bg-carrot{
+        background-color: var(--carrot);
+    }
+    
+    
