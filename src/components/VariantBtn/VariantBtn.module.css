@@ -1,26 +1,26 @@
 .variantBtn {
 	position: relative;
-	width: 205px;
-	height: 58px;
-	margin-right: 35px;
-	border-radius: 40px;
+	width: 160px;
+	height: 37px;
+
+	border-radius: 5px;
 
 	display: flex;
 	align-items: center;
 	justify-content: center;
 
-	color: #F25551;
+	color: #767676;
 	background-color: transparent;
 
 	transition: background-color 0.3s ease-in-out;
 }
 
 .variantBtn img {
-	margin-right: 16px;
-	width: 24px;
-	height: 24px;
+	margin-right: 10px;
+	width: 10px;
+	height: 10px;
 }
 
 .variantBtn:hover {
-	background-color: #462730;
+	box-shadow: 1px 1px 10px 1px #767676;
 }

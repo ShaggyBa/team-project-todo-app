@@ -2,29 +2,45 @@ import React from "react";
 
 import s from "./VariantBtn.module.css";
 
+import plusIcon from "../../assets/plus_icon.svg";
+import deleteIcon from "../../assets/delete_icon.svg";
+
 import { IButton } from "../../types/IButton.types";
 
 export const VariantBtn: React.FC<IButton> = ({ variant }): JSX.Element => {
+	let icon: string;
 	let buttonText: string;
-
 	switch (variant) {
+
 		case "add-list":
-			buttonText = "Add List";
+			icon = plusIcon;
+			buttonText = "Add list";
 			break;
+
 		case "add-task":
-			buttonText = "Add Task";
+			icon = plusIcon;
+			buttonText = "New task";
 			break;
+
 		case "delete-list":
+			icon = deleteIcon;
 			buttonText = "Delete List";
 			break;
+
+		case "delete-task":
+			icon = deleteIcon;
+			buttonText = "Delete Task";
+			break;
+
 		default:
+			icon = deleteIcon;
 			buttonText = "Default-btn";
 			break;
 	}
 
 	return (
 		<button className={`${s.variantBtn}`}>
-			<img src={""} alt={buttonText} />
+			<img src={icon} alt={buttonText} />
 			<span>{buttonText}</span>
 		</button>
 	);
