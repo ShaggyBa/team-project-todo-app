@@ -1,6 +1,7 @@
 import React from "react";
 import "./reset.css";
-import "./UI-colors.css";
+import "./UI-styles.css";
+import { VariantBtn } from "./components/VariantBtn/VariantBtn";
 
 function App() {
 	return (
@@ -8,7 +9,12 @@ function App() {
 			<header className="app-header">
 			</header>
 			<div className="container">
+				<VariantBtn variant="add-task" />
+				<VariantBtn variant="add-list" />
+				<VariantBtn variant="delete-list" />
+				<VariantBtn />
 			</div>
+			<footer className="app-footer"></footer>
 		</div>
 	);
 }
