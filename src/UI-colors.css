@@ -19,6 +19,7 @@
     --darkToBrighterThreeGray: #7C7C7C;
     --darkToBrighterFourGray: #B3B3B3;
     --theMostBrighterGray: #EFEFEF;
+    --backgroundOfNav: #F4F6F8;
     --anotherWhite: #F1F1F1;
     --carrot: #FF6464;
     }
@@ -159,5 +160,7 @@
     .bg-carrot{
         background-color: var(--carrot);
     }
-    
+    .backgroundOfNav{
+        background-color: var(--backgroundOfNav)
+    }
     

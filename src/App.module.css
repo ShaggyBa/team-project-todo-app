@@ -1,24 +1,34 @@
-.todoApp_Wrapper{
+.todoApp_Wrapper {
+    width: 746px;
+    margin: 0 auto;
     display: grid;
-    grid-template-areas: 
-    "header header" 
-    "nav tasks"
-    "";
+    grid-template-areas:
+        "header header"
+        "nav tasks"
+        "footer footer";
+
+    grid-template-columns: 200px 10fr;
 }
 
-.todoApp_MainWrapper{
-    grid-area: main;
-}
-.todoApp_NavArea{
+.todoApp_NavArea {
     grid-area: nav;
-}
-.todoApp_TaskArea{
-    grid-area: tasks;
+    background-color: var(--backgroundOfNav);
+    min-height: 100px;
 }
 
-.todoApp_Header{
-    grid-area: header;
+.todoApp_TaskArea {
+    grid-area: tasks;
+    margin: auto;
+    background-color: var(--white);
 }
-.todoApp_Footer{
+
+.todoApp_Header {
+    margin-top: 20px;
+    grid-area: header;
+    background-color: var(--brighterGray);
+}
+
+.todoApp_Footer {
     grid-area: footer;
+    background-color: var(--brighterGray);
 }
