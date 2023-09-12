@@ -8,9 +8,9 @@ import Trash from "../../assets/icons/trash.svg";
 
 import { IButton } from "../../types/IButton.types";
 
-export const VariantBtn: React.FC<IButton> = ({ variant }) => {
-  let buttonText;
-  let icon;
+export const VariantBtn: React.FC<IButton> = ({ variant }): JSX.Element => {
+  let icon: string;
+  let buttonText: string;
 
   switch (variant) {
     case "add-list":
