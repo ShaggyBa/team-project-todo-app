@@ -1,8 +1,6 @@
 import React from "react";
-import logo from "./assets/logo.svg";
 import "./reset.css";
-import "./UI-styles.css";
-import { VariantBtn } from "./components/VariantBtn/VariantBtn";
+import "./UI-colors.css";
 
 function App() {
 	return (
@@ -10,10 +8,6 @@ function App() {
 			<header className="app-header">
 			</header>
 			<div className="container">
-				<VariantBtn variant="add-task" />
-				<VariantBtn variant="add-list" />
-				<VariantBtn variant="delete-list" />
-				<VariantBtn />
 			</div>
 		</div>
 	);
