@@ -1,27 +1,32 @@
 .variantBtn {
-	position: relative;
-	width: 160px;
+	max-width: 160px;
 	height: 37px;
 
-	border-radius: 5px;
+	padding: 10px 21px;
+	border-radius: 4px;
 
 	display: flex;
 	align-items: center;
 	justify-content: center;
 
-	color: var(--gray_700);
 	background-color: transparent;
+	color: var(--gray_700);
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: 0.15px;
+
+	cursor: pointer;
 
 	transition: background-color 0.3s ease-in-out;
 }
 
 .variantBtn img {
-    --size: 10px;
-    margin-right: 10px;
-    width: var(--size);
-    height: var(--size);
+	--size: 10px;
+	margin-right: 10px;
+	width: var(--size);
+	height: var(--size);
 }
 
 .variantBtn:hover {
-	box-shadow: 1px 1px 10px 1px var(--gray_700);
+	box-shadow: 0px 2px 10px 0px var(--box-shadow-dark);
 }
