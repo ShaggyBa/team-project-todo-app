@@ -2,8 +2,8 @@ import React from "react";
 
 import s from "./VariantBtn.module.css";
 
-import plusIcon from "../../assets/plus_icon.svg";
-import deleteIcon from "../../assets/delete_icon.svg";
+import plusIcon from "../../assets/icons/plus_icon.svg";
+import deleteIcon from "../../assets/icons/delete_icon.svg";
 
 import { IButton } from "../../types/IButton.types";
 

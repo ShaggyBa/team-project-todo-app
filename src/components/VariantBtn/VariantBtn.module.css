@@ -1,16 +1,21 @@
 .variantBtn {
-	position: relative;
-	width: 160px;
+	max-width: 160px;
 	height: 37px;
 
-	border-radius: 5px;
+	padding: 10px 21px;
+	border-radius: 4px;
 
 	display: flex;
 	align-items: center;
 	justify-content: center;
 
-	color: #767676;
 	background-color: transparent;
+	color: #767676;
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: 0.15px;
+
+	cursor: pointer;
 
 	transition: background-color 0.3s ease-in-out;
 }
@@ -22,5 +27,5 @@
 }
 
 .variantBtn:hover {
-	box-shadow: 1px 1px 10px 1px #767676;
+	box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.15);
 }
