@@ -6,4 +6,10 @@
 
 .todoApp__taskArea p {
     text-align: center;
+    color: var(--gray_100);
+    font-family: Montserrat;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }

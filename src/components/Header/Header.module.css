@@ -1,5 +1,8 @@
 .todoApp__header {
-    margin-top: 20px;
     grid-area: header;
     background-color: var(--gray_300);
+    padding: 10px;
+}
+.todoApp__header__img{
+    width: 100px;
 }
