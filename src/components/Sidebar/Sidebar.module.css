@@ -1,0 +1,5 @@
+.todoApp__navArea {
+    grid-area: nav;
+    background-color: var(--navBackground_100);
+    min-height: 100px;
+}
