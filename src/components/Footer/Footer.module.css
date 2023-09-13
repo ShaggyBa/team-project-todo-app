@@ -1,0 +1,8 @@
+.todoApp__footer {
+    grid-area: footer;
+    background-color: var(--gray_300);
+}
+
+.todoApp__footer p {
+    text-align: right;
+}
