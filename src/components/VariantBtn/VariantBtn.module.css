@@ -21,9 +21,10 @@
 }
 
 .variantBtn img {
+	--size: 10px;
 	margin-right: 10px;
-	width: 10px;
-	height: 10px;
+	width: var(--size);
+	height: var(--size);
 }
 
 .variantBtn:hover {

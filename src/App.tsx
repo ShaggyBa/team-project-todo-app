@@ -1,25 +1,22 @@
 import React from "react";
 import "./reset.css";
 import "./UI-colors.css";
-import { Sidebar } from "./components/index";
+import cssStyles from "./App.module.css";
+import { Sidebar } from "./components/Sidebar/Sidebar";
+import { Header } from "./components/Header/Header";
+import { MainContent } from "./components/MainContent/MainContent";
+import { Footer } from "./components/Footer/Footer";
 
-function App() {
-  const lists = [
-    { id: 1, title: "Учеба" },
-    { id: 2, title: "Фронтенд" },
-    { id: 3, title: "Способы самоубийства" },
-  ];
-
+const App: React.FC = () => {
+  /*Отрефакторил от нативности компоненты, теперь <header> .. etc - возвращает компонента*/
   return (
-    <div className="app">
-      <header className="app-header"></header>
-      <div className="app-main">
-        <Sidebar lists={lists} />
-        {/* Main */}
-        <div className="app-content"></div>
-      </div>
+    <div className={cssStyles.todoApp__wrapper}>
+      <Header />
+      <Sidebar />
+      <MainContent />
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;
