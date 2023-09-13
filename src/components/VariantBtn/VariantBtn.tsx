@@ -7,7 +7,7 @@ import deleteIcon from "../../assets/delete_icon.svg";
 
 import { IButton } from "../../types/IButton.types";
 
-export const VariantBtn: React.FC<IButton> = ({ variant }): JSX.Element => {
+export const VariantBtn: React.FC<IButton> = ({ variant }) => {
 	let icon: string;
 	let buttonText: string;
 	switch (variant) {
@@ -39,7 +39,7 @@ export const VariantBtn: React.FC<IButton> = ({ variant }): JSX.Element => {
 	}
 
 	return (
-		<button className={`${s.variantBtn}`}>
+		<button className={s.variantBtn}>
 			<img src={icon} alt={buttonText} />
 			<span>{buttonText}</span>
 		</button>

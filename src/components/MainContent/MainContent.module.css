@@ -1,4 +1,9 @@
+.todoApp__taskArea {
+    grid-area: tasks;
+    margin: auto;
+    background-color: var(--primary_50);
+}
 
-.MainContent p {
+.todoApp__taskArea p {
     text-align: center;
 }

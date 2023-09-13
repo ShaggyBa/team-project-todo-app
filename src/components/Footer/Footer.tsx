@@ -3,7 +3,7 @@ import cssStyles from "./Footer.module.css"
 
 const Footer: React.FC = () => {
 	return (
-		<div className={cssStyles.Footer}>
+		<div className={cssStyles.todoApp__footer}>
 			<p>Made By Chelipizdriki</p>
 		</div >
 	)

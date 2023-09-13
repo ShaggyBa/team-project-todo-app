@@ -1,4 +1,4 @@
-.todoApp_Wrapper {
+.todoApp__wrapper {
     width: 746px;
     margin: 0 auto;
     display: grid;
@@ -10,25 +10,7 @@
     grid-template-columns: 200px 10fr;
 }
 
-.todoApp_NavArea {
-    grid-area: nav;
-    background-color: var(--backgroundOfNav);
-    min-height: 100px;
-}
 
-.todoApp_TaskArea {
-    grid-area: tasks;
-    margin: auto;
-    background-color: var(--white);
-}
 
-.todoApp_Header {
-    margin-top: 20px;
-    grid-area: header;
-    background-color: var(--brighterGray);
-}
 
-.todoApp_Footer {
-    grid-area: footer;
-    background-color: var(--brighterGray);
-}
+

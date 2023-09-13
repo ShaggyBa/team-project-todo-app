@@ -3,9 +3,9 @@ import cssStyles from "./MainContent.module.css"
 
 const MainContent: React.FC = () => {
 	return (
-		<div className={cssStyles.MainContent}>
+		<main className={cssStyles.todoApp__taskArea}>
 			<p>MainContent</p>
-		</div >
+		</main >
 	)
 }
 

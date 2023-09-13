@@ -7,24 +7,14 @@ import Header from "./components/Header/Header";
 import MainContent from "./components/MainContent/MainContent";
 import Footer from "./components/Footer/Footer";
 
-function App() {
+const App: React.FC = () => {
+	/*Отрефакторил от нативности компоненты, теперь <header> .. etc - возвращает компонента*/
 	return (
-		<div className={cssStyles.todoApp_Wrapper}>
-			<header className={cssStyles.todoApp_Header}>
-				<Header />
-			</header>
-
-				<div className={cssStyles.todoApp_NavArea}>
-					<Sidebar />
-				</div>
-
-				<div className={cssStyles.todoApp_TaskArea}>
-					<MainContent />
-				</div>
-
-			<footer className={cssStyles.todoApp_Footer}>
-				<Footer />
-			</footer>
+		<div className={cssStyles.todoApp__wrapper}>
+			<Header />
+			<Sidebar />
+			<MainContent />
+			<Footer />
 		</div>
 	);
 }

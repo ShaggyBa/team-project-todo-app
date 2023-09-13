@@ -3,9 +3,9 @@ import cssStyles from "./Header.module.css"
 
 const Header: React.FC = () => {
 	return (
-		<div className={cssStyles.Header}>
+		<header className={cssStyles.todoApp__header}>
 				Header
-		</div >
+		</header >
 	)
 }
 
