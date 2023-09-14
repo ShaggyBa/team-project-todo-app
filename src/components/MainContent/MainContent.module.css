@@ -1,7 +1,8 @@
 .todoApp__taskArea {
     grid-area: tasks;
-    margin: auto;
+    /*margin: auto;*/
     background-color: var(--primary_50);
+    padding: 48px 20px;
 }
 
 .todoApp__taskArea p {
