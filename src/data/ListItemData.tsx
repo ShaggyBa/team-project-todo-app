@@ -1,6 +1,6 @@
 import { IListItem } from "../types/IListItem.types";
 
-export const ListItems: IListItem[] = [
+export const ListItemsData: IListItem[] = [
     {
         "id": 1,
         "title": "Task 1",
