@@ -3,7 +3,7 @@ import "./reset.css";
 import "./UI-colors.css";
 import cssStyles from "./App.module.css";
 import { Header, MainContent, Sidebar, Footer } from "./components/index";
-import {ListItemsData} from "./data/ListItemData";
+import {ListItemsData} from "./data/ListItemsData";
 
 const App: React.FC = () => {
 

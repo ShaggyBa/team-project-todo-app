@@ -8,6 +8,48 @@
     letter-spacing: 0.15px;  
 }
 
-.disc .green {
-    color: var(--green_300);
+.list__item {
+	width: 160px;
+	padding: 10px 12px;
+	border-radius: 4px;
+	padding: 10px 0 10px 5px;
+
+
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
 }
+
+.item__title {
+	margin-left: 10px;
+	color: var(--black_1000);
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: 0.15px;
+}
+
+.list__item:hover {
+	box-shadow: 0px 2px 10px 0px var(--box-shadow-light);
+
+}
+
+.disc {
+	flex-shrink: 0;
+	display: block;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: var(--turquoise_50);
+}
+
+.disc.red{
+    background-color: var(--red_50);}
+
+.disc.green{
+    background-color: var(--turquoise_50);}
+
+.disc.blue{
+    background-color: var(--cyan_100);}
+
+.disc.brown{
+    background-color: var(--dirtTurquoise_50);}
