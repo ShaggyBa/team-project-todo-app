@@ -47,3 +47,12 @@
 	font-family: "Lato";
 	color: #9C9C9C;
 }
+
+.variantBtn.delete-list {
+	width: 15px;
+	height: 15px;
+	background-color: transparent;
+	opacity: 0;
+}
+
+

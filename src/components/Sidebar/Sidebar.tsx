@@ -8,6 +8,7 @@ import { ReactComponent as PlusIcon } from "../../assets/icons/plus_icon.svg";
 // import { ReactComponent as DeleteIcon } from "../../assets/icons/delete_icon.svg";
 import { ReactComponent as ListIcon } from "../../assets/icons/list-icon.svg";
 
+
 export const Sidebar: React.FC<ISidebar> = ({ lists }) => {
   const listsMap = lists.map((list) => (
     <ListItem key = {list.id} id = {list.id} title = {list.title} color = {list.color} />
