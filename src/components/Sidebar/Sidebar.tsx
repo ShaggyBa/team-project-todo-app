@@ -1,11 +1,10 @@
 import React from "react";
-import { VariantBtn } from "../index";
+import { ListItemPopover, VariantBtn } from "../index";
 import s from "./Sidebar.module.css";
 
 import { ISidebar } from "../../types/ISidebar.types";
 
 import { ReactComponent as PlusIcon } from "../../assets/icons/plus_icon.svg";
-// import { ReactComponent as DeleteIcon } from "../../assets/icons/delete_icon.svg";
 import { ReactComponent as ListIcon } from "../../assets/icons/list-icon.svg";
 
 export const Sidebar: React.FC<ISidebar> = ({ lists }) => {
@@ -31,6 +30,7 @@ export const Sidebar: React.FC<ISidebar> = ({ lists }) => {
         <PlusIcon />
         <span>Добавить список</span>
       </VariantBtn>
+      <ListItemPopover />
     </aside>
   );
 };
