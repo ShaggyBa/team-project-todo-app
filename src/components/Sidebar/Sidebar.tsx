@@ -1,5 +1,5 @@
 import React from "react";
-import { ListItemPopover, VariantBtn } from "../index";
+import { ListItemPopover, VariantBtn, ListItem } from "../index";
 import s from "./Sidebar.module.css";
 
 import { ISidebar } from "../../types/ISidebar.types";
