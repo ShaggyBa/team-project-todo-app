@@ -1,0 +1,63 @@
+.popover {
+	top: 13px;
+	left: 46px;
+	position: relative;
+	z-index: 100;
+	width: 235px;
+	height: 148px;
+	border-radius: 10px;
+	background: #FFF;
+	box-shadow: 0px 6px 10px 0px var(--box-shadow-light);
+	padding: 18px 17px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.popover__input {
+	font-family: "Lato";
+	width: 200px;
+	height: 32px;
+	border-radius: 4px;
+	border: 1px solid #EFEFEF;
+	background: transparent;
+	padding: 7px 0 7px 11px;
+}
+
+.popover__input::placeholder {
+	color: var(--gray_500);
+	font-size: 14px;
+	font-weight: 600;
+	line-height: normal;
+	letter-spacing: 0.15px;
+}
+
+.popover__listColors {
+	margin: 13px 0;
+	display: flex;
+}
+
+.disc {
+	cursor: pointer;
+	margin-right: 5px;
+	flex-shrink: 0;
+	display: block;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: var(--turquoise_50);
+}
+
+.disc:last-child {
+	margin-right: 0;
+}
+
+.disc:hover {
+	/* border: 1px solid var(--gray_500); */
+	border: 2px solid var(--gray_800);
+}
+
+/* .disc.active { - когда выбираем цвет делаем кружочек активным
+	border: 2px solid var(--gray_800);
+} */
