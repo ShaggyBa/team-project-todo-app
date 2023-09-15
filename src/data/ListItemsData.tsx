@@ -4,21 +4,21 @@ export const ListItemsData: IListItem[] = [
     {
         "id": 1,
         "title": "Важные дела",
-        "color": "#4DD599"
+        "color": "var(--gray_800)"
     },
     {
         "id": 2,
         "title": "Не очень важные дела ",
-        "color": "#FF6464"
+        "color": "var(--dirtTurquoise_50)"
     },
     {
         "id": 3,
         "title": "Совсем неважные дела",
-        "color": "#64C4ED"
+        "color": "var(--cyan_100)"
     },
     {
         "id": 4,
         "title": "Никогда не выполнять ",
-        "color": "#FFBBCC"
+        "color": "var(--pink_100)"
     }
 ]
