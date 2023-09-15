@@ -6,12 +6,16 @@ import { IButton } from "../../types/IButton.types";
 
 export const VariantBtn: React.PropsWithChildren<React.FC<IButton>> = ({
   variant,
-  onClick,
   children,
+  onClick,
   ...rest
 }) => {
   return (
-    <button className={s.variantBtn + " " + s[`${variant}`]} onClick={onClick}>
+    <button
+      className={s.variantBtn + " " + s[`${variant}`]}
+      onClick={onClick}
+      {...rest}
+    >
       {children}
     </button>
   );

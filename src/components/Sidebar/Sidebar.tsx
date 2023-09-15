@@ -7,13 +7,30 @@ import { ISidebar } from "../../types/ISidebar.types";
 import { ReactComponent as PlusIcon } from "../../assets/icons/plus_icon.svg";
 import { ReactComponent as ListIcon } from "../../assets/icons/list-icon.svg";
 
+import { IList } from "../../types/ILists.types";
+
 export const Sidebar: React.FC<ISidebar> = ({ lists }) => {
-  const listsMap = lists.map((list) => (
-    <li className={s.list__item} key={list.id}>
-      <span className={s.disc}></span>
-      <span className={s.item__title}>{list.title}</span>
-    </li>
-  ));
+  // const [listItems, setListItems] = React.useState<ListItem[]>(lists); - когда появится ListItem
+
+  const [listItems, setListItems] = React.useState<IList[]>(lists);
+
+  const listsMap = React.useMemo(() => {
+    console.log("map use");
+
+    return listItems.map((list) => (
+      <li className={s.list__item} key={list.id}>
+        <span className={s.disc}></span>
+        <span className={s.item__title}>{list.title}</span>
+      </li>
+    ));
+  }, [listItems]);
+
+  const handleAddList = (newList: IList) => {
+    setListItems([...listItems, newList]);
+  };
+
+  console.log(listsMap);
+
   return (
     <aside className={s.sidebar}>
       <ul className={s.sidebar__filters}>
@@ -30,7 +47,7 @@ export const Sidebar: React.FC<ISidebar> = ({ lists }) => {
         <PlusIcon />
         <span>Добавить список</span>
       </VariantBtn>
-      <ListItemPopover />
+      <ListItemPopover lastListId={listItems.length} addList={handleAddList} />
     </aside>
   );
 };

@@ -1,4 +1,6 @@
+import { IList } from "./ILists.types";
+
 export interface IPopover {
-  onClose?: () => void;
-  onSubmit?: () => void;
+  lastListId: number;
+  addList: ({ id, title, color }: IList) => void;
 }

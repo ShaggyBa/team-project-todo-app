@@ -4,11 +4,13 @@ import "./UI-colors.css";
 import cssStyles from "./App.module.css";
 import { Header, MainContent, Sidebar, Footer } from "./components/index";
 
+import { IList } from "./types/ILists.types";
+
 const App: React.FC = () => {
-  const lists = [
-    { id: 1, title: "Учеба" },
-    { id: 2, title: "Работа" },
-    { id: 3, title: "Способы самоубийства" },
+  const lists: IList[] = [
+    { id: 1, title: "Учеба", color: "green" },
+    { id: 2, title: "Работа", color: "red" },
+    { id: 3, title: "Способы самоубийства", color: "blue" },
   ];
 
   return (

@@ -1,10 +1,4 @@
-type TLists = IList[];
-
-interface IList {
-  id: number;
-  title: string;
-}
-
+import { IList } from "./ILists.types";
 export interface ISidebar {
-  lists: TLists;
+  lists: IList[];
 }
