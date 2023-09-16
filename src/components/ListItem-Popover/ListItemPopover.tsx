@@ -23,7 +23,8 @@ export const ListItemPopover: React.FC<IPopover> = ({
     setCurrentColor(color);
   };
 
-  const handleAddClick = () => {
+  const handleAddClick = (e: React.FormEvent) => {
+    e.preventDefault();
     if (titleValue === "" || currentColor === "") return;
     addList({ id: lastListId + 1, title: titleValue, color: currentColor });
     changeColor("");
@@ -31,7 +32,7 @@ export const ListItemPopover: React.FC<IPopover> = ({
   };
 
   return (
-    <div className={s.popover}>
+    <form className={s.popover}>
       <input
         type="text"
         className={s.popover__input}
@@ -54,12 +55,12 @@ export const ListItemPopover: React.FC<IPopover> = ({
           );
         })}
       </div>
-      <VariantBtn variant="add" onClick={handleAddClick}>
+      <VariantBtn type="submit" variant="add" onClick={handleAddClick}>
         Добавить
       </VariantBtn>
       <VariantBtn variant="close">
         <CloseIcon />
       </VariantBtn>
-    </div>
+    </form>
   );
 };

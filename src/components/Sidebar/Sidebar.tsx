@@ -14,9 +14,9 @@ export const Sidebar: React.FC<ISidebar> = ({ lists }) => {
 
   const [listItems, setListItems] = React.useState<IList[]>(lists);
 
-  const listsMap = React.useMemo(() => {
-    console.log("map use");
+  const lastIdOfList = React.useRef(listItems.length);
 
+  const listsMap = React.useMemo(() => {
     return listItems.map((list) => (
       <li className={s.list__item} key={list.id}>
         <span className={s.disc}></span>
@@ -25,11 +25,13 @@ export const Sidebar: React.FC<ISidebar> = ({ lists }) => {
     ));
   }, [listItems]);
 
-  const handleAddList = (newList: IList) => {
-    setListItems([...listItems, newList]);
-  };
-
-  console.log(listsMap);
+  const handleAddList = React.useCallback(
+    (newList: IList) => {
+      setListItems([...listItems, newList]);
+      lastIdOfList.current += 1;
+    },
+    [listItems]
+  );
 
   return (
     <aside className={s.sidebar}>
@@ -47,7 +49,10 @@ export const Sidebar: React.FC<ISidebar> = ({ lists }) => {
         <PlusIcon />
         <span>Добавить список</span>
       </VariantBtn>
-      <ListItemPopover lastListId={listItems.length} addList={handleAddList} />
+      <ListItemPopover
+        lastListId={lastIdOfList.current}
+        addList={handleAddList}
+      />
     </aside>
   );
 };
