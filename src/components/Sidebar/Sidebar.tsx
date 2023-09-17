@@ -16,14 +16,12 @@ export const Sidebar: React.FC<ISidebar> = ({ lists }) => {
 
   const lastIdOfList = React.useRef(listItems.length);
 
-  const listsMap = React.useMemo(() => {
-    return listItems.map((list) => (
-      <li className={s.list__item} key={list.id}>
-        <span className={s.disc}></span>
-        <span className={s.item__title}>{list.title}</span>
-      </li>
-    ));
-  }, [listItems]);
+  const listsMap = listItems.map((list) => (
+    <li className={s.list__item} key={list.id}>
+      <span className={s.disc}></span>
+      <span className={s.item__title}>{list.title}</span>
+    </li>
+  ));
 
   const handleAddList = React.useCallback(
     (newList: IList) => {
