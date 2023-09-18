@@ -62,9 +62,3 @@
 	border-radius: 50%;
 
 }
-
-.variantBtn.delete-task {
-	box-shadow: 0px 2px 10px 0px var(--box-shadow-light);
-	width: 100px;
-
-}
