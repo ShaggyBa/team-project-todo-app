@@ -33,6 +33,7 @@
     width: 2px;
     position: relative;
     left: 8px;
+    margin-right: 32px;
 }
 .plus:after {
     content: "";
@@ -43,3 +44,4 @@
     left: -8px;
     top: 8px;
 }
+

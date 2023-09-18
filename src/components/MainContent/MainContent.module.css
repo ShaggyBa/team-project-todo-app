@@ -16,4 +16,12 @@
 }
 .line {
     width: auto;
+    margin: 0 0 16px 0;
+}
+
+.taskArea__h1  {
+    font-size: 32px;
+    font-weight: bolder;
+    color: var(--cyan_100);
+    margin: 0 0 22px 0;
 }

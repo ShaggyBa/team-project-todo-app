@@ -1,12 +1,16 @@
 import React from 'react'
 import cssStyles from "./TodoItem.module.css"
+import {ReactComponent as CheckIcon} from "../../assets/icons/check_icon.svg";
+import {VariantBtn } from "../index";
 
 export const TodoItem: React.FC = () => {
     return (
         <div className={cssStyles.todoApp__todoItem}>
-            <span className={cssStyles.disc__active}></span>
+            <div className={cssStyles.disc__active}>
+                <CheckIcon/>
+            </div>
             <span className={cssStyles.todo__title}>Tекст задачи</span>
-            <span className={cssStyles.todo__delete}></span>
+            <VariantBtn variant="delete-task">Удалить</VariantBtn>
         </div >
     )
 }

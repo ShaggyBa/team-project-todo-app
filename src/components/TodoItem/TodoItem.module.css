@@ -12,7 +12,8 @@
 }
 
 .todo__title {
-    margin-left: 16px;
+    /*margin-left: 16px;*/
+    margin: 0 16px;
     color: var(--black_1000);
     font-size: 16px;
     font-weight: 600;
@@ -65,3 +66,4 @@
 .todo__delete:after {
     transform: rotate(-45deg);
 }
+
