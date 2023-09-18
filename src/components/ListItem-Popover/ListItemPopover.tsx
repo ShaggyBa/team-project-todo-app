@@ -10,6 +10,7 @@ import { colors } from "./Colors";
 export const ListItemPopover: React.FC<IPopover> = ({
   lastListId,
   addList,
+  onClose,
 }) => {
   const [titleValue, setTitleValue] = React.useState<string>("");
 
@@ -58,7 +59,7 @@ export const ListItemPopover: React.FC<IPopover> = ({
       <VariantBtn type="submit" variant="add" onClick={handleAddClick}>
         Добавить
       </VariantBtn>
-      <VariantBtn variant="close">
+      <VariantBtn onClick={onClose} variant="close">
         <CloseIcon />
       </VariantBtn>
     </form>

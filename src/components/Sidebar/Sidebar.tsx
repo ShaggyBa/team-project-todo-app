@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { ListItemPopover, VariantBtn } from "../index";
 import s from "./Sidebar.module.css";
 
@@ -13,6 +13,11 @@ export const Sidebar: React.FC<ISidebar> = ({ lists }) => {
   // const [listItems, setListItems] = React.useState<ListItem[]>(lists); - когда появится ListItem
 
   const [listItems, setListItems] = React.useState<IList[]>(lists);
+
+  const [isShown, setIsShown] = useState(false);
+  const handleShowPopover = () => {
+    setIsShown(current => !current);
+  }
 
   const lastIdOfList = React.useRef(listItems.length);
 
@@ -43,14 +48,16 @@ export const Sidebar: React.FC<ISidebar> = ({ lists }) => {
         {/* filter-3 */}
       </ul>
       <ul className={s.sidebar__lists}>{listsMap}</ul>
-      <VariantBtn variant="add-list">
+      <VariantBtn onClick={handleShowPopover} variant="add-list">
         <PlusIcon />
         <span>Добавить список</span>
       </VariantBtn>
-      <ListItemPopover
-        lastListId={lastIdOfList.current}
-        addList={handleAddList}
-      />
+      {isShown && (
+        <ListItemPopover onClose={handleShowPopover}
+          lastListId={lastIdOfList.current}
+          addList={handleAddList}
+        />
+      )}
     </aside>
   );
 };
