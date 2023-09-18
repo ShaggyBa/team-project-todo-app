@@ -5,8 +5,6 @@ import cssStyles from "./App.module.css";
 import { Header, MainContent, Sidebar, Footer } from "./components/index";
 import {ListItemsData} from "./data/ListItemsData";
 
-import { IList } from "./types/ILists.types";
-
 const App: React.FC = () => {
 
   return (

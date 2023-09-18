@@ -1,8 +1,6 @@
 import React from "react";
 import { IListItem } from "../../types/IListItem.types";
 import { ReactComponent as DeleteIcon } from "../../assets/icons/delete_icon.svg";
-import { VariantBtn } from "../index";
-
 import s from "./ListItem.module.css";
 
 

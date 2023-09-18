@@ -16,6 +16,8 @@ export const ListItemPopover: React.FC<IPopover> = ({
 
   const [currentColor, setCurrentColor] = React.useState<string>("");
 
+  const [activeColor, setActiveColor] = React.useState<number | null>(null);
+
   const changeTitleValue = (e: React.ChangeEvent<HTMLInputElement>) => {
     setTitleValue(e.target.value);
   };
@@ -30,7 +32,12 @@ export const ListItemPopover: React.FC<IPopover> = ({
     addList({ id: lastListId + 1, title: titleValue, color: currentColor });
     changeColor("");
     setTitleValue("");
+	 setActiveColor(null);
   };
+
+ const handleAddActive = (id: number) => {
+	setActiveColor(id);
+ }
 
   return (
     <form className={s.popover}>
@@ -49,9 +56,12 @@ export const ListItemPopover: React.FC<IPopover> = ({
           return (
             <span
               key={index}
-              className={s.disc}
+              className={`${s.disc} ${index === activeColor ? s.active : ""}`}
               style={{ backgroundColor: color }}
-              onClick={() => changeColor(color)}
+              onClick={() => {
+					handleAddActive(index)
+					changeColor(color)
+				}}
             ></span>
           );
         })}

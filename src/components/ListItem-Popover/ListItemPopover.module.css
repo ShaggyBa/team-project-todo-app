@@ -54,10 +54,9 @@
 }
 
 .disc:hover {
-	/* border: 1px solid var(--gray_500); */
-	border: 2px solid var(--gray_800);
+	border: 1px solid var(--gray_500);
 }
 
-/* .disc.active { - когда выбираем цвет делаем кружочек активным
+.disc.active {
 	border: 2px solid var(--gray_800);
-} */
+}
