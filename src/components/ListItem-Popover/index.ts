@@ -1,1 +1,1 @@
-export { ListItemPopover } from "./ListItem-Popover";
+export { ListItemPopover } from "./ListItemPopover";
