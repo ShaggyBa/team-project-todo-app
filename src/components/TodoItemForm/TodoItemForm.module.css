@@ -16,7 +16,7 @@
 .todo__title {
     margin-left: 33px;
     text-decoration: underline;
-    color: #e8e8e8;
+    color: var(--gray_300);
     font-size: 16px;
     font-weight: 600;
     letter-spacing: 0.15px;
@@ -27,18 +27,18 @@
 }
 
 
-.d24 {
-    background: #e8e8e8;
+.plus {
+    background: var(--gray_300);
     height: 20px;
     width: 2px;
     position: relative;
     left: 8px;
 }
-.d24:after {
+.plus:after {
     content: "";
     height: 2px;
     width: 20px;
-    background: #e8e8e8;
+    background: var(--gray_300);
     position: absolute;
     left: -8px;
     top: 8px;

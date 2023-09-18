@@ -22,7 +22,7 @@
 
 .variantBtn img {
 	--size: 10px;
-	margin-right: 10px;
+	margin-right: 20px;
 	width: var(--size);
 	height: var(--size);
 }

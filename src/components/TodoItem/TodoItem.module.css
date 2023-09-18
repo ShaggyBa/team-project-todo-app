@@ -6,8 +6,6 @@
     padding: 10px 12px;
     border-radius: 4px;
     padding: 10px 0 10px 5px;
-
-
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -38,7 +36,7 @@
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    border: 2px #e8e8e8 solid;
+    border: 2px var(--gray_300) solid;
     /*background-color: var(--turquoise_50);*/
 }
 
@@ -57,7 +55,7 @@
     position: absolute;
     width: 15px;
     height: 1.5px;
-    background: gray;
+    background: var(--gray_300);
 }
 
 .todo__delete:before {
