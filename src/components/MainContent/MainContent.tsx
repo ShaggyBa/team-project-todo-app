@@ -2,6 +2,7 @@ import React from 'react'
 import cssStyles from "./MainContent.module.css"
 import {TodoItem} from "../TodoItem";
 import {TodoItemForm} from "../TodoItemForm";
+import { VariantBtn } from "../index";
 
 export const MainContent: React.FC = () => {
 	return (

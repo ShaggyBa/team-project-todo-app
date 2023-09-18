@@ -4,7 +4,10 @@ export type TVariantsOfButton =
   | "add-list"
   | "add-task"
   | "delete-list"
-  | "delete-task";
+  | "delete-task"
+  | "cancel"
+  | "add"
+  | "close";
 
 export interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: TVariantsOfButton;

@@ -1,9 +1,11 @@
 import React from "react";
-import { VariantBtn } from "../index";
+import { ListItemPopover, VariantBtn } from "../index";
 import s from "./Sidebar.module.css";
 
-import { ReactComponent as ListIcon } from "../../assets/icons/list-icon.svg";
 import { ISidebar } from "../../types/ISidebar.types";
+
+import { ReactComponent as PlusIcon } from "../../assets/icons/plus_icon.svg";
+import { ReactComponent as ListIcon } from "../../assets/icons/list-icon.svg";
 
 export const Sidebar: React.FC<ISidebar> = ({ lists }) => {
   const listsMap = lists.map((list) => (
@@ -24,7 +26,11 @@ export const Sidebar: React.FC<ISidebar> = ({ lists }) => {
         {/* filter-3 */}
       </ul>
       <ul className={s.sidebar__lists}>{listsMap}</ul>
-      <VariantBtn variant="add-list" />
+      <VariantBtn variant="add-list">
+        <PlusIcon />
+        <span>Добавить список</span>
+      </VariantBtn>
+      <ListItemPopover />
     </aside>
   );
 };

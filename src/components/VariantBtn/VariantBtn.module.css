@@ -1,32 +1,64 @@
 .variantBtn {
-	max-width: 160px;
-	height: 37px;
-
-	padding: 10px 21px;
+	width: 100%;
+	height: 34px;
 	border-radius: 4px;
-
 	display: flex;
 	align-items: center;
 	justify-content: center;
-
-	background-color: transparent;
 	color: var(--gray_700);
 	font-size: 14px;
 	font-weight: 600;
 	letter-spacing: 0.15px;
-
 	cursor: pointer;
+	font-family: "Lato";
+}
 
+.variantBtn.add-list {
+	width: 160px;
+	background-color: transparent;
 	transition: background-color 0.3s ease-in-out;
 }
 
-.variantBtn img {
+.variantBtn.add-list svg {
 	--size: 10px;
 	margin-right: 20px;
 	width: var(--size);
 	height: var(--size);
 }
 
-.variantBtn:hover {
-	box-shadow: 0px 2px 10px 0px var(--box-shadow-dark);
+.variantBtn.add-list:hover {
+	box-shadow: 0px 2px 10px 0px var(--box-shadow-light);
+}
+
+.variantBtn.add-task {
+	width: 145px;
+	background-color: var(--turquoise_50);
+	text-align: center;
+	color: var(--primary_50);
+}
+
+.variantBtn.cancel {
+	width: 90px;
+	background-color: var(--white_200);
+
+	text-align: center;
+	color: #9C9C9C;
+}
+
+.variantBtn.add {
+	width: 200px;
+	height: 37px;
+	background-color: var(--turquoise_50);
+	text-align: center;
+	color: var(--primary_50);
+}
+
+.variantBtn.close {
+	position: absolute;
+	top: -10px;
+	right: -10px;
+	width: 21px;
+	height: 21px;
+	border-radius: 50%;
+
 }
