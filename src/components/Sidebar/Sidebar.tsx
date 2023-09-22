@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useReducer } from "react";
 import { ListItemPopover, VariantBtn, ListItem } from "../index";
 import s from "./Sidebar.module.css";
 
@@ -9,28 +9,33 @@ import { ReactComponent as ListIcon } from "../../assets/icons/list-icon.svg";
 
 import { IList } from "../../types/ILists.types";
 
+import {reducerActions} from "./SidebarReducer";
+
 export const Sidebar: React.FC<ISidebar> = ({ lists }) => {
 
-  const [listItems, setListItems] = React.useState<IList[]>(lists);
+  const [listItems, dispatch] = useReducer(reducerActions, lists);
 
   const [isShown, setIsShown] = useState(false);
   const handleShowPopover = () => {
     setIsShown(current => !current);
   }
 
-  const lastIdOfList = React.useRef(listItems.length);
+  const lastIdOfList = React.useRef(listItems.length + 1);
 
   const listsMap = listItems.map((list, index) => (
-	<ListItem key={index} id={index} title={list.title} color={list.color}/>
+    <ListItem key={index} id={index} title={list.title} color={list.color}/>
   ));
   
   const handleAddList = React.useCallback(
-    (newList: IList) => {
-      setListItems([...listItems, newList]);
-      lastIdOfList.current += 1;
+    (newList: IList | undefined) => {
+		if (newList !== undefined) {
+      dispatch({ type: "add", payload: newList });
+		}
     },
-    [listItems]
+    []
   );
+
+	//* To-do: const handleDeleteList = (id: number) = {...}
 
   return (
     <aside className={s.sidebar}>
