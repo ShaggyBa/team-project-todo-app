@@ -23,7 +23,7 @@ export const Sidebar: React.FC<ISidebar> = ({ lists }) => {
   const listsMap = listItems.map((list, index) => (
 	<ListItem key={index} id={index} title={list.title} color={list.color}/>
   ));
-
+  
   const handleAddList = React.useCallback(
     (newList: IList) => {
       setListItems([...listItems, newList]);
@@ -34,12 +34,12 @@ export const Sidebar: React.FC<ISidebar> = ({ lists }) => {
 
   return (
     <aside className={s.sidebar}>
-      <ul className={s.sidebar__filters}>
+      {listsMap.length > 0 && <ul className={s.sidebar__filters}>
         <li className={s.sidebar__filters__item}>
           <ListIcon />
           <span>Все задачи</span>
         </li>
-      </ul>
+      </ul>}
       <ul className={s.sidebar__lists}>{listsMap}</ul>
       <VariantBtn onClick={handleShowPopover} variant="add-list">
         <PlusIcon />

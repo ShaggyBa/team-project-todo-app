@@ -49,6 +49,5 @@
 .sidebar__lists {
 	margin-top: 38px;
 	max-height: 640px;
-	height: 100%;
 	overflow: hidden auto;
 }
