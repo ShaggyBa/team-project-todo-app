@@ -7,7 +7,7 @@ import { ISidebar } from "../../types/ISidebar.types";
 import { ReactComponent as PlusIcon } from "../../assets/icons/plus_icon.svg";
 import { ReactComponent as ListIcon } from "../../assets/icons/list-icon.svg";
 
-import { IList } from "../../types/ILists.types";
+import { IListItem } from "../../types/IListItem.types";
 
 import {reducerActions} from "./SidebarReducer";
 
@@ -16,24 +16,22 @@ export const Sidebar: React.FC<ISidebar> = ({ lists }) => {
   const [listItems, dispatch] = useReducer(reducerActions, lists);
 
   const [isShown, setIsShown] = useState(false);
+
   const handleShowPopover = () => {
     setIsShown(current => !current);
   }
 
   const lastIdOfList = React.useRef(listItems.length + 1);
 
-  const listsMap = listItems.map((list, index) => (
-    <ListItem key={index} id={index} title={list.title} color={list.color}/>
-  ));
-  
-  const handleAddList = React.useCallback(
-    (newList: IList | undefined) => {
+  const listsMap = React.useMemo(() => listItems.map(
+	(list, index) =>  <ListItem key={index} id={index} title={list.title} color={list.color} tasks={list.tasks}/>), 
+	[listItems]);
+
+	const handleAddList = (newList: IListItem | undefined) => {
 		if (newList !== undefined) {
       dispatch({ type: "add", payload: newList });
 		}
-    },
-    []
-  );
+   };
 
 	//* To-do: const handleDeleteList = (id: number) = {...}
 

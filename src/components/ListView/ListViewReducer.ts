@@ -1,11 +1,11 @@
-import {IList} from "../../types/ILists.types";
+import {IListItem} from "../../types/IListItem.types";
 
 interface IAction {
   type: string,
-  payload: IList;
+  payload: IListItem;
 }
 
-export const reducerActions = (state: IList[], action: IAction): IList[] => {
+export const reducerActions = (state: IListItem[], action: IAction): IListItem[] => {
   switch(action.type) {
     case "add":
       return [...state, action.payload]

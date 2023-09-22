@@ -1,0 +1,39 @@
+.listView {
+	grid-area: tasks;
+	background-color: var(--primary_50);
+	padding: 56px 0 0 57px;
+}
+
+.listView__title {
+	color: var(--cyan_100);
+
+	font-family: Montserrat;
+	font-size: 32px;
+	font-weight: 700;
+
+	background-color: transparent;
+	cursor: inherit;
+
+	display: flex;
+	align-items: center;
+}
+
+.line {
+	width: 100%;
+	border-bottom: 1px solid var(--white_100);
+	margin: 20px 0;
+}
+
+.noTasks {
+	color: var(--gray_100);
+	font-family: 'Montserrat';
+	font-size: 32px;
+	font-weight: 700;
+	height: 100%;
+	width: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}

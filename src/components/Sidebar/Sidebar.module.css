@@ -9,6 +9,8 @@
 	background-color: var(--white_200);
 
 	padding: 48px 20px;
+	font-family: "Roboto", sans-serif;
+
 }
 
 .sidebar__filters {

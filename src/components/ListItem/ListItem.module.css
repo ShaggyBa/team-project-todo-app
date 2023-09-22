@@ -19,11 +19,13 @@
 	margin-left: 10px;
 	color: var(--black_1000);
 	font-size: 14px;
-	font-weight: 600;
 	letter-spacing: 0.15px;
-	white-space: nowrap; /* Запрещаем перенос строк */
-	overflow: hidden; /* Обрезаем все, что не помещается в область */
-    text-overflow: ellipsis; /* Добавляем многоточие */
+	white-space: nowrap;
+	/* Запрещаем перенос строк */
+	overflow: hidden;
+	/* Обрезаем все, что не помещается в область */
+	text-overflow: ellipsis;
+	/* Добавляем многоточие */
 	flex-grow: 1;
 	max-width: 100px;
 }
@@ -43,7 +45,7 @@
 	margin-left: 5px;
 }
 
-.list__item:hover > .icon__item {
+.list__item:hover>.icon__item {
 	opacity: 1;
 }
 

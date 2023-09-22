@@ -29,7 +29,7 @@ export const ListItemPopover: React.FC<IPopover> = ({
   const handleAddClick = (e: React.FormEvent) => {
     e.preventDefault();
     if (titleValue === "" || currentColor === "") return;
-    addList({ id: lastListId + 1, title: titleValue, color: currentColor });
+    addList({ id: lastListId + 1, title: titleValue, color: currentColor, tasks: [] });
     changeColor("");
     setTitleValue("");
 	 setActiveColor(null);
