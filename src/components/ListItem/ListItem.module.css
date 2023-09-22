@@ -1,15 +1,3 @@
-.listItem {
-    color: #000;
-    font-family: Roboto;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.15px;
-	display: flex;
-	justify-content: space-between;  
-}
-
 .list__item {
 	width: 160px;
 	padding: 10px 12px;
@@ -24,6 +12,7 @@
 	height: 10px;
 	border-radius: 50%;
 	background-color: var(--turquoise_50);
+	align-self: center;
 }
 
 .item__title {
