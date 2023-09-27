@@ -9,6 +9,8 @@
 	background-color: var(--white_200);
 
 	padding: 48px 20px;
+	font-family: "Roboto", sans-serif;
+
 }
 
 .sidebar__filters {
@@ -49,6 +51,5 @@
 .sidebar__lists {
 	margin-top: 38px;
 	max-height: 640px;
-	height: 100%;
 	overflow: hidden auto;
 }

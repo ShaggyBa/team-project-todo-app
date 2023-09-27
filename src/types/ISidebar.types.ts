@@ -1,4 +1,4 @@
-import { IList } from "./ILists.types";
+import { IListItem } from "./IListItem.types";
 export interface ISidebar {
-  lists: IList[];
+  lists: IListItem[];
 }

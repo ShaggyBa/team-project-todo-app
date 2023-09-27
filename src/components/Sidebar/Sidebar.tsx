@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useReducer } from "react";
 import { ListItemPopover, VariantBtn, ListItem } from "../index";
 import s from "./Sidebar.module.css";
 
@@ -7,39 +7,42 @@ import { ISidebar } from "../../types/ISidebar.types";
 import { ReactComponent as PlusIcon } from "../../assets/icons/plus_icon.svg";
 import { ReactComponent as ListIcon } from "../../assets/icons/list-icon.svg";
 
-import { IList } from "../../types/ILists.types";
+import { IListItem } from "../../types/IListItem.types";
+
+import {reducerActions} from "./SidebarReducer";
 
 export const Sidebar: React.FC<ISidebar> = ({ lists }) => {
 
-  const [listItems, setListItems] = React.useState<IList[]>(lists);
+  const [listItems, dispatch] = useReducer(reducerActions, lists);
 
   const [isShown, setIsShown] = useState(false);
+
   const handleShowPopover = () => {
     setIsShown(current => !current);
   }
 
-  const lastIdOfList = React.useRef(listItems.length);
+  const lastIdOfList = React.useRef(listItems.length + 1);
 
-  const listsMap = listItems.map((list, index) => (
-	<ListItem key={index} id={index} title={list.title} color={list.color}/>
-  ));
+  const listsMap = React.useMemo(() => listItems.map(
+	(list, index) =>  <ListItem key={index} id={index} title={list.title} color={list.color} tasks={list.tasks}/>), 
+	[listItems]);
 
-  const handleAddList = React.useCallback(
-    (newList: IList) => {
-      setListItems([...listItems, newList]);
-      lastIdOfList.current += 1;
-    },
-    [listItems]
-  );
+	const handleAddList = (newList: IListItem | undefined) => {
+		if (newList !== undefined) {
+      dispatch({ type: "add", payload: newList });
+		}
+   };
+
+	//* To-do: const handleDeleteList = (id: number) = {...}
 
   return (
     <aside className={s.sidebar}>
-      <ul className={s.sidebar__filters}>
+      {listsMap.length > 0 && <ul className={s.sidebar__filters}>
         <li className={s.sidebar__filters__item}>
           <ListIcon />
           <span>Все задачи</span>
         </li>
-      </ul>
+      </ul>}
       <ul className={s.sidebar__lists}>{listsMap}</ul>
       <VariantBtn onClick={handleShowPopover} variant="add-list">
         <PlusIcon />
