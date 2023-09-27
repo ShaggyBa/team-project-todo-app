@@ -1,6 +1,6 @@
-import { IList } from "../types/ILists.types";
+import { IListItem  } from "../types/IListItem.types";
 
-export const ListItemsData: IList[] = [
+export const ListItemsData: IListItem [] = [
     {
         "id": 1,
         "title": "Важные дела",
