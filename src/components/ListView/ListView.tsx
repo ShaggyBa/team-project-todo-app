@@ -1,37 +1,43 @@
 import React from 'react'
 import s from "./ListView.module.css"
-import {TodoItem} from "../TodoItem";
-import {TodoItemForm} from "../TodoItemForm";
+import { TodoItem } from "../TodoItem";
+import { TodoItemForm } from "../TodoItemForm";
 
-import {IListView} from "../../types/IListView.types"
+import { IListView } from "../../types/IListView"
+IListView
 
-import {reducerActions} from "./ListViewReducer"
+import { addTaskAC, deleteTaskAC, reducerActions } from "./ListViewReducer"
 
 import { ReactComponent as ChangeIcon } from "../../assets/icons/change_icon.svg";
 import { VariantBtn } from '../VariantBtn';
 
-export const ListView: React.FC<IListView> = ({list}) => {
+export const ListView: React.FC<IListView> = ({ list }) => {
 
-  const [todoItems, dispatch] = React.useReducer(reducerActions, []);
+	const [todoItems, dispatch] = React.useReducer(reducerActions, []);
 
-  const todoMap = React.useMemo(() => todoItems.map(
-	(list, index) =>  <TodoItem key={index}/>), 
-	[todoItems]);
+	const handleAddList = (taskText: string) => {
+		dispatch(addTaskAC(taskText));
+	}
+	const handleDeleteList = (id: number) => {
+		dispatch(deleteTaskAC(id));
+	}
 
-	const [isEditTitle, setIsEditTitle] = React.useState(false);
+	const todoMap = React.useMemo(() => todoItems.map(
+		({id, title, complete}) => <TodoItem handleDeleteList={handleDeleteList} key={id} id={id} title={title} complete={complete} />),
+		[todoItems]);
 
 	return (
-	list ? <main className={s.listView}>
+		list ? <main className={s.listView}>
 			<div className={s.listView__title}>
 				<h1>{list.title}</h1>
 				<VariantBtn variant='edit-title'>
 					<ChangeIcon />
 				</VariantBtn>
 			</div>
-			<div className={s.line}/>
+			<div className={s.line} />
 			{todoMap}
-			<TodoItemForm></TodoItemForm>
+			<TodoItemForm handleAddList={handleAddList}></TodoItemForm>
 		</main >
-	: <div className={s.noTasks}>Задачи отсутствуют</div>
+			: <div className={s.noTasks}>Задачи отсутствуют</div>
 	)
 }

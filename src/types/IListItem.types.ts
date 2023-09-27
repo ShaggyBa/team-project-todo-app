@@ -5,5 +5,5 @@ export interface IListItem {
     id: number;
     title: string;
     color: string;
-	 tasks: ITodoItem[];
+	tasks: ITodoItem[];
 }
